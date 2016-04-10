@@ -1,0 +1,59 @@
+body {
+	color: #1A171B !important;
+}
+h2 {
+  padding-top: 10px;
+}
+.container-color {
+  background-color: #98BF0E;
+}
+.navbar-brand {
+	color: #1A171B !important;
+}
+.navbar-default .navbar-toggle {
+  border-color: white;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+.navbar {
+	border-radius: 0;
+	width: 100%;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #1A171B;
+}
+.tile {
+  padding: 0 15px 5px 15px;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #1A171B;
+}
+.navbar-nav > li > a {
+  color: white;
+}
+li {
+  border-bottom-style: solid;
+  border-bottom-color: #1A171B;
+  border-bottom-width: 1px;
+}
+.navbar-nav > li:hover{
+  background-color: #98BF0E;
+  opacity: .7;
+}
+li:hover > a{
+	color: white !important;
+}
+@media (max-width: 767px) {
+  .tile {
+    margin: 0 30px 5px 30px;
+  }
+
+  .navbar-nav, .navbar-collapse {
+    background-color: white;
+  }
+
+  .navbar-nav {
+    margin: 0 -15px;
+  }
+}
