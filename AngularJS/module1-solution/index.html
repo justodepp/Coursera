@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" ng-app="LunchCheck">
+  <head>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <script src="angular.min.js"></script>
+    <script src="app2.js"></script>
+    <style>
+      .message { font-size: 1.3em; font-weight: bold; }
+    </style>
+  </head>
+<body>
+   <div class="container">
+     <h1>Lunch Checker</h1>
+     <p>
+       Provide some food that tou eat on lunch.
+     </p>
+     <div ng-controller="LunchCheckController">
+       <form ng-submit="checkLunch()" novalidate>
+         <div class="form-group" ng-class="{'has-error': hasError, 'has-success': status_code == 1, 'has-warning': status_code == 2}">
+             <input type="text"
+             placeholder="list comma separated dishes you usually have for lunch"
+             class="form-control" ng-model="lunchContents" required>
+             <p class="help-block" ng-show="hasError">{{errorMessage}}</p>
+         </div>
+         <div class="form-group">
+             <button class="btn btn-default">Check If Too Much</button>
+         </div>
+       </form>
+       <div class="form-group message">
+         <div ng-hide="status_code == 0">
+          <h2>Your Lunch Is...</h2>
+          <div class="alert alert-success" ng-show="status_code == 1">
+          <h4>Enjoy!</h4>
+          </div>
+          <div class="alert alert-warning alert" ng-show="status_code == 2">
+          <h4>You need to eat less! :D</h4>
+          </div>
+        </div>
+       </div>
+    </div>
+  </div>
+</body>
+</html>
